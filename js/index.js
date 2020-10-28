@@ -31,4 +31,28 @@ document.addEventListener("keydown", function(){
     funBus.textContent = "hello World"
 })
 
+let h2 = document.querySelectorAll("h2")
+
+h2.forEach((element) => {
+    document.addEventListener("scroll", function(){
+    element.textContent = "GO GO GO!!"
+    })
+})
+  
+// h2.forEach((element) => {
+//     document.addEventListener("scroll", function(){
+//     if(element.textContent === "GO GO GO!!"){
+//         element.textContent = ""
+//     }
+//     })
+// })
+
+// let h2 = document.querySelectorAll("h2")
+
+// document.addEventListener("scroll", function(){
+//     h2.forEach((element) => {
+//         element.textContent = "GO GO GO!!"
+//     })
+    
+// })
 
