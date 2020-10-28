@@ -25,5 +25,10 @@ images.forEach((element) => {
     }))
 })
 
-    
+let funBus = document.querySelector("h1")
+
+document.addEventListener("keydown", function(){
+    funBus.textContent = "hello World"
+})
+
 
