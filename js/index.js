@@ -20,39 +20,46 @@ images.forEach((element)=>{
 
 images.forEach((element) => {
     element.addEventListener("click", (event => {
-        event.target.style.transform = "scale(1.0)"
-        
+        event.target.style.transform = "scale(1.0)"    
     }))
 })
 
 let funBus = document.querySelector("h1")
-
 document.addEventListener("keydown", function(){
     funBus.textContent = "hello World"
 })
 
-let h2 = document.querySelectorAll("h2")
+document.addEventListener("keyup", (event) => {
+    funBus.textContent = "Fun Bus";
+})
 
+
+let h2 = document.querySelectorAll("h2")
 h2.forEach((element) => {
     document.addEventListener("scroll", function(){
     element.textContent = "GO GO GO!!"
     })
 })
-  
-// h2.forEach((element) => {
-//     document.addEventListener("scroll", function(){
-//     if(element.textContent === "GO GO GO!!"){
-//         element.textContent = ""
-//     }
-//     })
-// })
 
-// let h2 = document.querySelectorAll("h2")
+h2.forEach(() => {
+    document.addEventListener("copy", (event) => {
+        event.target.style.color = "white"
+    })
+})
 
-// document.addEventListener("scroll", function(){
-//     h2.forEach((element) => {
-//         element.textContent = "GO GO GO!!"
-//     })
-    
-// })
+document.addEventListener("drag", function(event) {
+    event.target.style.opacity = .5;
+}, false);
+
+
+
+const button = document.querySelectorAll(".btn")
+button.forEach((btn) => {
+    btn.addEventListener("wheel", (event) => {
+        event.target.style.background = "red"
+    })
+})
+
+
+
 
