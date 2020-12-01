@@ -1,6 +1,7 @@
 // Your code goes here
-let navbutton = document.querySelector(".nav")
 
+//<-----NAVEGATION BAR---->
+let navbutton = document.querySelector(".nav")
 navbutton.addEventListener("mouseover", function(event){
     event.target.style.color = "red"
 })
@@ -9,8 +10,8 @@ navbutton.addEventListener("mouseout", function(event){
     event.target.style = navbutton 
 })
 
+//<-----IMAGES---->
 let images = document.querySelectorAll(".img-content")
-
 images.forEach((element)=>{
     element.addEventListener('dblclick', (event =>{
        event.target.style.transform = "scale(1.5)"
@@ -18,12 +19,14 @@ images.forEach((element)=>{
     }))
 })
 
+
 images.forEach((element) => {
     element.addEventListener("click", (event => {
         event.target.style.transform = "scale(1.0)"    
     }))
 })
 
+//<-----HEADERS---->
 let funBus = document.querySelector("h1")
 document.addEventListener("keydown", function(){
     funBus.textContent = "hello World"
@@ -52,7 +55,7 @@ document.addEventListener("drag", function(event) {
 }, false);
 
 
-
+//<-----BUTTONS---->
 const button = document.querySelectorAll(".btn")
 button.forEach((btn) => {
     btn.addEventListener("wheel", (event) => {
